@@ -1,2 +1,5 @@
-package com.example.medcheck.ui.controller;public class UserController {
+package com.example.medcheck.ui.controller;
+
+public class UserController {
+
 }
