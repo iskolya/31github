@@ -28,7 +28,7 @@ public class UserServiceImpl implements UserService {
         if(storedUserDetails != null) {
             throw new RuntimeException("Record already exist");
         }
-
+        String publicUserId = utils.genertateUserId(30);
 
 
         UserEntity userEntity = new UserEntity();
