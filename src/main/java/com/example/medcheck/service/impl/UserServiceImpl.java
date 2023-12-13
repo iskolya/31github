@@ -4,15 +4,13 @@ import com.example.medcheck.io.UserRepository;
 import com.example.medcheck.io.entity.UserEntity;
 import com.example.medcheck.service.UserService;
 import com.example.medcheck.share.dto.UserDto;
-import com.example.medcheck.ui.model.request.UserDetailRequestModel;
-import com.example.medcheck.ui.model.response.UserRest;
 import org.antlr.v4.runtime.misc.Utils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -28,7 +26,7 @@ public class UserServiceImpl implements UserService {
         if(storedUserDetails != null) {
             throw new RuntimeException("Record already exist");
         }
-        String publicUserId = utils.genertateUserId(30);
+        
 
 
         UserEntity userEntity = new UserEntity();
@@ -41,4 +39,9 @@ public class UserServiceImpl implements UserService {
         return returnValue;
 
     }
+    @Override
+    public UserDetails loadUserByUserName(String username) throws UsernameNotFoundException{
+        return null;
+    }
 }
+
