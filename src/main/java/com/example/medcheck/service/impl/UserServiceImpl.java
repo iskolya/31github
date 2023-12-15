@@ -39,9 +39,9 @@ public class UserServiceImpl implements UserService {
         return returnValue;
 
     }
-//    @Override
-//    public UserDetails loadUserByUserName(String username) throws UsernameNotFoundException{
-//        return null;
-//    }
+
+    public UserDetails loadUserByUserName(String username) throws UsernameNotFoundException{
+        return null;
+    }
 }
 
