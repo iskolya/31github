@@ -40,8 +40,6 @@ public class UserServiceImpl implements UserService {
 
     }
 
-    public UserDetails loadUserByUserName(String username) throws UsernameNotFoundException{
-        return null;
-    }
+
 }
 
